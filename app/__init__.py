@@ -26,6 +26,6 @@ def create_app(config_class=DevelopmentConfig):
     # a blueprint for main
     # decided that I will for cleaningness
     from .main import main_bp
-    app.register_blueprint(main_bp, url_prefix="/main")
+    app.register_blueprint(main_bp)
 
     return app
