@@ -15,7 +15,11 @@ def create_app(config_class=DevelopmentConfig):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
+    #Database part
     db.init_app(app)
+    from .models import Text
+    with app.app_context():
+        db.create_all()
 
     #Register blueprint for reading which I haven't coded yet
     from .reading import reading_bp
