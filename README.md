@@ -1,4 +1,4 @@
-# Reading APP
+# Reading App
 
 This is a practice Flask project for learning the modular architecture
 using **Blueprints**.
