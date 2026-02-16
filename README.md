@@ -26,3 +26,6 @@ This creates the environment and stores on the computer, the path is something l
 It does not create a venv folder in your project directory
 After the activation the name of the virtual env appears enclosed in the parentheses
 infront of the path in the Shell
+
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/ec1087c0-6918-4402-b996-c86530ea3b92" />
+
