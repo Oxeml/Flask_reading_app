@@ -2,7 +2,7 @@ import sys
 import os
 import json
 
-# COPY THIS PART EXACTLY
+# allows python find the path to the files seeder needs to import - app and run
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
