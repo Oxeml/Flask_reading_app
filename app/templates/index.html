@@ -1,9 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Wellcome!</title>
+	<meta charset="UTF-8">
+        <title>{{ title }}</title>
+	<link rel="stylesheet" href="../static/style_index.css">
     </head>
     <body>
-        <p>Please make sure you have at least half an hour</p>
+        <div id="greeting">
+            <h2>Hello, {{ user_name }}!</h2>
+	    <p>Ready to continue your reading journey?</p>
+        </div>
+        <div id="button">
+            <!--need to decide how to switch to the right lesson-->
+            <button id="b1">To the lesson</button>
+        </div>
+        <div id="finished_lessons" class="card">
+	    <h3>Completed lessons</h3>
+            <ul>
+		{% for lesson in completed_lessons %}
+		    <li>{{ lesson }}</li>
+		{% else %}
+		    <li>No lessons completed yet. Let's get started!</li>
+		{% endfor %}
+            </ul>
+        </div>        
     </body>
 </html>

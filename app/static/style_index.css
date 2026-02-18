@@ -1,0 +1,22 @@
+body {
+	font-family: 'Segoe UI';
+	padding: 20px;
+}
+
+#greeting {
+	margin-bottom: 20px;
+}
+
+#b1 {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#finished_lessons ul {
+	list-style-type: none;
+	padding: 0;
+}

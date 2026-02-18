@@ -17,7 +17,7 @@ def create_app(config_class=DevelopmentConfig):
 
     #Database part
     db.init_app(app)
-    from .models import Text
+    from .models import Lesson
     with app.app_context():
         db.create_all()
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Deep</title>
+
+        <!---Sandbox library-->
+        <script src="https://unpkg.com/skulpt@1.2.0/dist/skulpt.min.js"></script>
+        <script src="https://unpkg.com/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+    </head>
+
+    <body>
+        <h2>More Python</h2>
+
+        <textarea id="code" rows="6" cols="60">print("Hello!")</textarea>
+
+        <br>
+        <button onclick="runCode()">Run!</button>
+
+        <!-- <pre> formats the output representation, everything is aligned plus
+            monospaced characters--> 
+        <pre id="output"></pre>
+
+        <!--source code for this part is from here: https://skulpt.org/using.html-->
+        <script>
+            //tells Skulpt how to handle builtin functions also handles exceptions
+            function builtinRead(x) {
+                if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                    throw "File not found: '" + x + "'";
+                return Sk.builtinFiles["files"][x];
+            }
+
+            function outf(text) {
+                var mypre = document.getElementById("output");
+                // This appends each piece of Python output to your <pre> tag
+                mypre.innerText = mypre.innerText + text;
+            }
+
+            //Messenger between Skulpt and html
+            function runCode() {
+                var prog = document.getElementById("code").value.trim();
+                var mypre = document.getElementById("output");
+
+                mypre.innerText = '';
+                Sk.configure ({
+                    output: outf,
+                    read: builtinRead
+                });
+
+                var myPromise = Sk.misceval.asyncToPromise(function() {
+                    return Sk.importMainWithBody("<stdin>", false, prog, true);
+                });   
+                myPromise.then(function(mod) {
+                    console.log('success');
+                },
+                function(err) {
+                    console.log(err.toString());
+                });
+            }
+
+        </script>
+    </body>
+</html>

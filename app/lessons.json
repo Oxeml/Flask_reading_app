@@ -1,0 +1,25 @@
+[
+    {
+        "level": "base", "title": "Lesson 1", "content": "I wake up at 7 AM every day. I drink coffee and eat breakfast with my sister. Then, I walk to the park. It is a sunny day and I feel very happy."
+    },
+
+    {
+        "level": "base", "title": "Lesson 2", "content": "Tom lives in a small red house. It has a big garden with blue flowers. He likes to sit outside and read books. His cat sleeps on the green grass."
+    },
+
+    {
+        "level": "medium", "title": "Lesson 3", "content": "Last weekend, I traveled to the city by train. The station was very crowded, but I found a seat near the window. I saw many tall buildings and bright lights."
+    },
+
+    {
+        "level": "medium", "title": "Lesson 4", "content": "Many people now work from home using their computers. It is quiet and comfortable, but sometimes I miss my colleagues. We have video meetings every morning."
+    },
+
+    {
+        "level": "advanced", "title": "Lesson 5", "content": "Rapid advancements in AI are reshaping our society. While automation increases efficiency, it also raises ethical concerns regarding privacy. We must balance innovation with human values."
+    },
+
+    {
+        "level": "advanced", "title": "Lesson 6", "content": "Global temperatures are rising due to increased carbon emissions. Sustainable living is no longer a choice but a necessity. Every small action contributes to the preservation of our planet."
+    }
+]
