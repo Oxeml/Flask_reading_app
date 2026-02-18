@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block_extra_content %}
+	<div class="vocabularly">
+		<h3>Useful Vocabularly</h3>
+		<ul>
+			{% for word in vocabularly %}
+				<li><strong>{{ word.term }}:</strong> {{ word.definition }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock%}

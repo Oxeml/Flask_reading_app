@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Base reading</title>
-    </head>
-    <body>
-        <p>Let's start</p>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block extra_content %}
+    <div class="welcome-msg">
+        <p>🌟 Happy to have you here! Let's take it one step at a time.</p>
+    </div>
+{% endblock %}

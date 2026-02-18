@@ -33,7 +33,28 @@ infront of the path in the Shell
 - **Base template** - contains common structure for all lessons.
 - **Child templates** - inherit from the base template and add their own content depending on the level
   
-### Seeder
+## Seeder
+
+### Scope
 All lessons are stored in a database. To populate the database with initial lessons' content, I created a seeder.
 It reads from the .json file and inserts into the db automatocally. This makes filling the content in
 somewhat automatically without any kind of admin UI or tools like Postman.
+
+### Errors and debugging
+- Module Resolution: Fixed ModuleNotFoundError by adding the project root directory 
+  to sys.path. This allowed the seeder (located in /app) to "see" and import run.py and the app package.
+- Flask Application Context: Resolved ```RuntimeError: Working outside of application context``` by 
+  wrapping database operations within with ```app.app_context()```. This is required for Flask-SQLAlchemy 
+  to access the database configuration outside of a live web request.
+- File Path Handling: Fixed FileNotFoundError for lessons.json by using absolute paths (via os.path) or executing 
+  the script from the root, ensuring the seeder could locate the data source regardless of the terminal's working directory.
+
+### Running the seeder
+1. activate the virtual environment
+2. run ```python seeder.py```
+
+### Virtual environment
+- dependencies isolation, the project uses dependencies installed for the project, not globally on the machine
+- need to activate each time the project or it's part (like seeder) is running
+- to maintain the list of dependencies:
+  ```pip freeze > requirements.txt```
