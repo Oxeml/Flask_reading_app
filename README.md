@@ -29,3 +29,11 @@ infront of the path in the Shell
 
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/ec1087c0-6918-4402-b996-c86530ea3b92" />
 
+## Using templates
+- **Base template** - contains common structure for all lessons.
+- **Child templates** - inherit from the base template and add their own content depending on the level
+  
+### Seeder
+All lessons are stored in a database. To populate the database with initial lessons' content, I created a seeder.
+It reads from the .json file and inserts into the db automatocally. This makes filling the content in
+somewhat automatically without any kind of admin UI or tools like Postman.
