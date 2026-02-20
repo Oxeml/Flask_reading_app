@@ -58,3 +58,21 @@ somewhat automatically without any kind of admin UI or tools like Postman.
 - need to activate each time the project or it's part (like seeder) is running
 - to maintain the list of dependencies:
   ```pip freeze > requirements.txt```
+
+### Templating
+- Jinja2 Inheritance: implemented base-to-child architecture. Created base.html for shared structure and used {% block %} for level-specific content to be
+injected dynamically.
+
+- Dynamic Styling: Developed a multi-layered CSS strategy. In my base.html, which is a parent template for all lessons
+  within the head section there's a place for styling extentions:
+  ```{% block styles %}{% endblock %}```
+  so that in child .html templates there will be a styling extention in the <head> section:
+  ```{% block styles %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='<filename>.css') }}">
+     {% endblock %} ```
+
+- Data-driven Rendering: one route for all types of templates, developed by constructing a template name
+  after fetching the lesson data from the database. Optional content is passed everytime a template is being rendered,
+  and for now is managed by the fact that jinja2 ignores extra arguments gracefully :)
+
+- Debugging: here was to put the closing qoutes for the stylesheet.

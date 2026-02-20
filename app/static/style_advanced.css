@@ -1,0 +1,48 @@
+
+/* Body: Academic feel with a light gray-blue background */
+body {
+    background-color: #eef2f3;
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+/* Title: Stronger, more professional look */
+h1 {
+    color: #1a2a6c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 8px solid #b21f1f;
+    padding-left: 15px;
+}
+
+/* Vocabulary Container */
+.vocabulary {
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.vocabulary h3 {
+    color: #b21f1f;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Vocabulary List */
+.vocabulary ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.vocabulary li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.vocabulary li strong {
+    color: #1a2a6c;
+    font-variant: small-caps;
+}

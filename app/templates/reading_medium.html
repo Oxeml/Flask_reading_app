@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+<!--Here we insert an extention for the base styling, using jinja syntax-->
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_medium.css') }}">
+{% endblock %}
+
+<!--Specific content for a beginner learners comes here-->
 {% block extra_content %}
     <div class="exercises">
         <h3>Critical Thinking Questions</h3>

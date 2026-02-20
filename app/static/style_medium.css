@@ -1,0 +1,40 @@
+/* Body and Header (from your specs) */
+body { background-color: #b7bdb9; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+h1 { color: #882b5d; border-bottom: 2px solid #882b5d; padding-bottom: 10px; }
+
+/* The Exercises Container */
+.exercises {
+    background-color: rgba(255, 255, 255, 0.4); /* Subtle white overlay */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 5px solid #882b5d;
+}
+
+/* The Question Text */
+.exercises em {
+    color: #444;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* The Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box; /* Important: prevents width overflow */
+    resize: vertical; /* Only allows vertical stretching */
+}
+
+/* Optional: Focus state for the textarea */
+textarea:focus {
+    outline: none;
+    border-color: #882b5d;
+    box-shadow: 0 0 5px rgba(136, 43, 93, 0.3);
+}
+

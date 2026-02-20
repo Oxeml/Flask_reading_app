@@ -21,14 +21,16 @@ def create_app(config_class=DevelopmentConfig):
     with app.app_context():
         db.create_all()
 
-    #Register blueprint for reading which I haven't coded yet
+    #..Register blueprint for reading which I haven't coded yet
+    #..ok I prepared all my reading templates
     from .reading import reading_bp
     # url prefix is for the browser, it will add "reading" infront of any reading url
+    # so that whoever opens pages in the browser won't get confused where exactly they are :)
     app.register_blueprint(reading_bp, url_prefix="/reading")
 
     # need to handle the main route here either view function or also
-    # a blueprint for main
-    # decided that I will for cleaningness
+    # .. so I decided to have a blueprint for main
+    # for cleaningness
     from .main import main_bp
     app.register_blueprint(main_bp)
 

@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+<!--Here we insert an extention for the base styling, using jinja syntax-->
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_beginner.css') }}">
+{% endblock %}
+
+<!--Specific content for a beginner learners comes here-->
 {% block extra_content %}
     <div class="welcome-msg">
         <p>🌟 Happy to have you here! Let's take it one step at a time.</p>
